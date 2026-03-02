@@ -1,0 +1,224 @@
+/* FONT ASSOLUTAMENTE DISCUTIBILE */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        45deg,
+        hotpink,
+        cyan,
+        yellow,
+        lime,
+        violet
+    );
+    background-size: 400% 400%;
+    animation: rainbowBackground 10s infinite alternate;
+}
+
+/* ANIMAZIONE SFONDO PSICHEDELICO */
+@keyframes rainbowBackground {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* TITOLI DRAMMATICI */
+h1, h2 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 
+        0 0 5px pink,
+        0 0 10px cyan,
+        0 0 20px purple,
+        0 0 40px yellow;
+
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* PARAGRAFO SOSPETTO */
+p {
+    font-size: 1.5rem;
+    color: black;
+    background: yellow;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    animation: shake 1s infinite;
+}
+
+/* INPUT ORRENDO */
+input {
+    padding: 15px;
+    border-radius: 50px;
+    border: 4px dashed purple;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    outline: none;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px hotpink; }
+    50% { box-shadow: 0 0 30px cyan; }
+    100% { box-shadow: 0 0 5px hotpink; }
+}
+
+/* BOTTONI ESTETICA MYSPACE */
+button {
+    display: block;
+    margin: 15px auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, pink, purple, cyan);
+    background-size: 300%;
+    color: white;
+
+    transition: all 0.3s ease;
+    animation: buttonGradient 5s infinite linear;
+}
+
+@keyframes buttonGradient {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* HOVER ESAGERATO */
+button:hover {
+    transform: rotate(-5deg) scale(1.2);
+    box-shadow: 0 0 20px yellow, 0 0 40px hotpink;
+}
+
+/* OUTPUT MESSAGGI */
+#output, #secretOutput {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px black;
+    animation: floatText 2s infinite ease-in-out;
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* SHAKE RANDOM PER DRAMMA */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+/* CONTENITORE SEZIONE SEGRETA */
+#secretSection {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 5px dashed white;
+    animation: crazyBorder 3s infinite alternate;
+}
+
+@keyframes crazyBorder {
+    from { border-color: hotpink; }
+    to { border-color: cyan; }
+}
+
+/* BASE COMUNE BOTTONI SEGRETI */
+#secretSection button {
+    margin: 20px;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* OGNI BOTTONE HA PERSONALITÀ PROPRIA */
+
+#btn1 {
+    background: linear-gradient(45deg, red, orange);
+    animation: spin1 4s infinite linear;
+}
+
+#btn2 {
+    background: linear-gradient(45deg, cyan, blue);
+    animation: bounce2 1s infinite;
+}
+
+#btn3 {
+    background: linear-gradient(45deg, lime, green);
+    animation: wiggle3 0.5s infinite;
+}
+
+#btn4 {
+    background: linear-gradient(45deg, violet, purple);
+    animation: glow4 2s infinite alternate;
+}
+
+#btn5 {
+    background: linear-gradient(45deg, yellow, hotpink);
+    animation: flip5 3s infinite;
+}
+
+#btn6 {
+    background: linear-gradient(45deg, black, grey);
+    color: white;
+    animation: pulse6 1.5s infinite;
+}
+
+/* ANIMAZIONI ASSURDE */
+
+@keyframes spin1 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes wiggle3 {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+@keyframes glow4 {
+    from { box-shadow: 0 0 10px violet; }
+    to { box-shadow: 0 0 40px purple; }
+}
+
+@keyframes flip5 {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes pulse6 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* HOVER SUPER DRAMMATICO */
+#secretSection button:hover {
+    transform: scale(1.5) rotate(-10deg);
+    box-shadow: 0 0 30px white, 0 0 60px yellow;
+}
